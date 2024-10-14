@@ -1,0 +1,100 @@
+/* General styling */
+body {
+  background-color: #f0f0f5;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  padding: 20px 40px;
+}
+
+.home-container h1 {
+  color: #2c3e50;
+  margin: 30px 0 10px;
+  font-size: 36px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.home-container p {
+  font-size: 18px;
+  color: #34495e;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Grocery list grid */
+.grocery-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;  /* Increased gap between items for better spacing */
+  margin: 0;
+  padding: 0 20px;
+}
+
+.grocery-item {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.grocery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grocery-item img {
+  width: 120px;  /* Increased image size for better visibility */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.grocery-item h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.grocery-item p {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+/* Remove max-width constraints for full-width display */
+body, html {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.home-container {
+  max-width: none;
+  padding: 0 40px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .grocery-list {
+    padding: 0 20px;
+  }
+
+  .grocery-item {
+    padding: 15px;
+  }
+
+  .grocery-item h3 {
+    font-size: 18px;
+  }
+
+  .grocery-item img {
+    width: 100px;
+    height: 100px;
+  }
+}
